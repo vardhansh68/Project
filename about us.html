@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="shortcut icon" href="sources/shortcut.png" type="image/png" />
+    <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Saira+Extra+Condensed&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="sources/CAFE LOGO.png" type="image/png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+            --primary-color: black;
+            --secondary-color: white;
+
+        }
+
+        .dark {
+            --primary-color: white;
+            --secondary-color: black;
+        }
+
+        body {
+            font-family: 'Roboto Condensed', sans-serif;
+            background-color: var(--secondary-color);
+        }
+
+        .sidenav {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: black;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+        }
+
+        .sidenav a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+        }
+
+        header {
+            position: fixed;
+            background-color: #be664e42;
+            width: 100vw;
+        }
+
+        #head ul li {
+            display: inline-block;
+
+        }
+
+
+        #myBtn {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 30px;
+            z-index: 99;
+            font-size: 18px;
+            border: none;
+            outline: none;
+            background-color: red;
+            color: white;
+            cursor: pointer;
+            padding: 15px;
+            border-radius: 4px;
+        }
+
+        #myBtn:hover {
+            background-color: #555;
+        }
+
+        .sidenav a:hover {
+            color: #f1f1f1;
+        }
+
+        .sidenav .closebtn {
+            position: a bsolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 190px;
+            margin-top: -70px;
+        }
+
+        @media screen and (max-height: 450px) {
+            .sidenav {
+                padding-top: 15px;
+            }
+
+            .sidenav a {
+                font-size: 18px;
+            }
+        }
+
+        #background {
+            background-image: url(sources/thegreenyardcafe.com.png);
+            background-size: cover;
+            width: 100%;
+            height: 500px;
+        }
+
+
+        #loading {
+            width: 100%;
+            height: 100vh;
+            background: #fff url('https://i.pinimg.com/originals/5b/6f/88/5b6f887e44761a46ace6e989c085c5d3.gif') no-repeat center;
+            z-index: 9999;
+
+        }
+
+        
+        .box {
+            width: 500px;
+            height: 500px;
+            background-color: var(--secondary-color);
+            padding-left: 50px;
+        }
+
+        .box h4 {
+            text-align: center;
+            font-size: 40px;
+            font-family: sans-serif;
+
+        }
+
+        .box p {
+            font-size: 18px;
+            color: #757575;
+            line-height: 30px;
+            text-align: justify;
+
+        }
+
+        a {
+            color: #9b0505;
+            text-decoration: none;
+            transition: color 0.5s;
+
+        }
+
+        footer {
+            position: relative;
+            width: 100%;
+            background-color: #121213;
+            min-height: 100px;
+            display: flex;
+            padding: 20px 50px;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        footer .social_icons footer .menu {
+            position: relative;
+            display: flex;
+
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            margin: 10px 0;
+
+        }
+
+        footer .social_icons li footer .menu li {
+            list-style: none;
+        }
+
+        footer .social_icons li a {
+            font-size: 2em;
+            color: #fff;
+            margin: 0 10px;
+            display: inline-block;
+            transition: 0.5s;
+
+        }
+
+        footer .social_icons li a:hover {
+            transform: translateY(-10px);
+
+        }
+
+        footer .menu li a {
+            font-size: 1.2em;
+            color: rgb(247, 236, 236);
+            margin: 0 10px;
+            display: inline-block;
+            transition: 0.5s;
+            text-decoration: none;
+            opacity: 0.7;
+        }
+
+        footer .menu li a:hover {
+            opacity: 1;
+        }
+
+        footer p {
+            color: rgb(247, 243, 243);
+            text-align: center;
+            margin-top: 15px;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+
+        .contact {
+            width: 100%;
+            min-height: 100px;
+            background-color: var(--secondary-color);
+            padding: 30px 60px 30px 60px;
+            display: flex;
+
+        }
+
+        #office {
+            font-size: 32px;
+        }
+
+        .contact h4 {
+            font-size: 25px;
+        }
+
+        .contact p {
+            font-size: 16px;
+            color: red;
+        }
+    </style>
+</head>
+
+<body onload="myFunction()">
+    <div id="loading"></div>
+    <header>
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <img src="sources/CAFE LOGO.png" style="height: 150px;width: 200px;">
+            <a href="home.html">HOME</a>
+            <a href="menu.html">ORDER ONLINE</a>
+            <a href="about us.html">ABOUT US</a>
+            <a href="index.html">RESERVATION</a>
+            <a href="offers.html">OFFERS</a>
+            <img src="sources/moon.png" style="height: 50px; width: 50px;" id="theme">
+
+        </div>
+        <div style="display: flex;">
+            <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+            <h4 style="padding-left: 40%; margin-top: 14px;">
+                THE GREEN YARD CAFE
+            </h4>
+            <a href="login page.html" style="padding-left: 40%; margin-top: 14px;">
+                <ion-icon name="person-outline"></ion-icon>
+            </a>
+        </div>
+
+        <script>
+            function openNav() {
+                document.getElementById("mySidenav").style.width = "250px";
+            }
+
+            function closeNav() {
+                document.getElementById("mySidenav").style.width = "0";
+            }
+        </script>
+
+    </header>
+    <main>
+        <div id="background">
+
+        </div>
+        <div style="display: flex;">
+            <div class="box">
+                <h4>Welcome To<br> GreenYard Cafe</h4>
+                <p>Focusing on the gourmet diner as well as the youth of India,
+                    The GreenYard Café aims to bring Indian cuisine back “in-Vogue”.
+                    “The GreenYard” can have many connotations, but at The GreenYard Café, it has just one,
+                    “creating an illusion” with its cuisine. Best described as a gourmet experience,
+                    it amalgamates traditional global and Indian classics, with Indian influences, contemporary
+                    presentations, culinary styles and ambiance. It is a quirky, chic, modern Indian café, where guests
+                    enjoy a sensory experience through the finest modern Indian cuisine where guests enjoy a sensory
+                    experience through the finest modern Indian cuisine.
+
+                </p>
+            </div>
+            <div style="padding-left: 200px;">
+                <img src="sources/icon.jpeg" style="height: 500px; width: 500px;">
+            </div>
+        </div>
+        <div
+            style="background-image: url(sources/SEATING.jpg); background-attachment: fixed; width: 100%; height: 500px; background-size: cover;">
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div style="display: flex;">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3490.970515791916!2d77.63542331508998!3d28.958598982290297!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390c66bdcbca5ec5%3A0x3c9ef1ae5de801f3!2sThe%20Cafeteria!5e0!3m2!1sen!2sin!4v1640533754837!5m2!1sen!2sin"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            <div class="box" style="padding-left: 150px;">
+                <h4>Location</h4>
+                <p>Greenyard cafe is Meeruts favourite hangout for coffee and conversations.
+                    Popularly known as GYC, we strive to provide the best experience to our guests.
+                    Our coffees are sourced from hundereds of small coffee planters, who made us who we are today
+                    and we're glad to be a part of their lives. We opened the cafe in 2012 near Swami Vivekanand
+                    Subharti Universtiy in meerut.
+                </p>
+            </div>
+
+        </div>
+        <div style="display: flex;">
+            <div class="box">
+                <h4>Description</h4>
+                <p>Taste and See Coffee Shop and Gallery offers a unique coffee house environment
+                    unlike any other in Macon. We are not only a place to drop in and get your morning cup of coffee
+                    (although you are more than welcome to do that), we are a place where you can sit down and enjoy
+                    that tailor-made cup of coffee.
+                    If you need to work, we have a seating area created specifically for you.
+                    If you need to rest, we have a soft-seating area in front of a stone fire place that is
+                    perfect for your weary mind and body.
+
+                </p>
+            </div>
+            <div style="padding-left: 200px; padding-top: 50px;">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/hHTteL5zbs8"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </div>
+        </div>
+        <div style="background-color: whitesmoke; width: 100%; min-height: 500px;">
+            <div style="font-size: 36px; text-align: center; font-family: 'Fjalla One', sans-serif;">
+                <h4>Contact Information</h4>
+            </div>
+            <div class="contact">
+                <div>
+                    <h4 id="office">Corporate Office</h4>
+                    <p>3rd floor,Subharti Universtiy<br>
+                        NH-58,Meerut,Uttar Pradesh,India</p>
+                </div>
+                <div style="padding-left: 500px;">
+                    <h4>PHONE NUMBER</h4>
+                    <a href="#">
+                        <p>9917307082</p>
+                    </a>
+                    <h4>EMAIL</h4>
+                    <a href="#">
+                        <p>mittalkeshav8394@gmail.com<br>
+                            harshvardhansinghchandel8@.com</p>
+                    </a>
+
+
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+    <footer>
+        <div class="waves">
+            <div class="wave" id="wave1"></div>
+        </div>
+        <ul class="social_icons" style="display: flex; list-style: none;">
+            <li>
+                <a href="#">
+                    <ion-icon name="logo-instagram"></ion-icon>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <ion-icon name="logo-facebook"></ion-icon>
+                </a>
+            </li>
+            <li>
+                <a href="https://youtu.be/hHTteL5zbs8">
+                    <ion-icon name="logo-youtube"></ion-icon>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <ion-icon name="logo-twitter"></ion-icon>
+                </a>
+            </li>
+        </ul>
+        <ul class="menu" style="display: flex; list-style: none;">
+            <li>
+                <a href="home.html">HOME</a>
+            </li>
+            <li>
+                <a href="menu.html">ORDER ONLINE</a>
+            </li>
+            <li>
+                <a href="about us.html">ABOUT US</a>
+            </li>
+            <li>
+                <a href="login page.html">LOG IN</a>
+            </li>
+        </ul>
+        <p>THE GREENYARD CAFE</p>
+
+    </footer>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script>
+        var preloader = document.getElementById('loading');
+
+        function myFunction() {
+            preloader.style.display = 'none';
+        }
+
+    </script>
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+
+
+    <script>
+        //Get the button
+        var mybutton = document.getElementById("myBtn");
+
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function () { scrollFunction() };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+    <script>
+        var theme = document.getElementById("theme");
+        theme.onclick = function () {
+            document.body.classList.toggle("dark");
+            if (document.body.classList.contains("dark")) {
+                theme.src = "sources/sun.png";
+            } else {
+                theme.scr = "sources/moon.png";
+            }
+        }
+    </script>
+</body>
+
+</html>
