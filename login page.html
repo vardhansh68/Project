@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
+    <title>login form</title>
+    <script src="login2.js"></script>
+
+    <style>
+        body {
+            font-family: 'Roboto Condensed', sans-serif
+        }
+
+        input[type=email],
+        input[type=password] {
+            width: 70%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid black;
+            box-sizing: border-box;
+            border-radius: 20px;
+            text-align: center;
+        }
+
+        button {
+            background-color: rgb(81, 81, 233);
+            padding: 14px 20px;
+            margin: 8px;
+            border: none;
+            cursor: pointer;
+            width: 70%;
+            border-radius: 20px;
+            border: 1px solid black;
+        }
+
+
+        button:hover {
+            background-color: rgb(25, 21, 46);
+            color: white;
+        }
+
+        span.psw {
+            float: right;
+            padding-top: 16px;
+            text-decoration: none;
+            margin-right: 75px;
+        }
+
+
+        .head {
+            text-align: center;
+        }
+
+        form {
+
+            width: 620px;
+            height: 595px;
+
+            background-size: cover;
+            opacity: 0.9;
+
+            background-color: white;
+            float: right;
+            margin: auto;
+
+
+        }
+
+        a:link {
+            text-decoration: none;
+        }
+
+        span.can {
+            float: right;
+            margin-right: 20px;
+            margin-top: 10px;
+        }
+
+        h1,
+        h4 {
+            color: rgb(49, 49, 209);
+        }
+
+        #nav {
+            padding-right: 5px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div>
+
+
+        <form method="get">
+            <span class="can"><a href="home.html"><img src="sources/cancle.png" width="30px"
+                        height="30px"></a></span><br></br>
+            <div class="head">
+                <h1>LOGIN</h1>
+                <h4>To create your profile</h4>
+                <div class="container">
+                    <input type="email" placeholder="Email Id" name="uname" id="email" onkeyup="isempty()" required>
+                    <input type="password" placeholder="Password" name="psw" id="password" onkeyup="isempty()" required>
+                </div>
+                <div class="but">
+                    <button id="btn" type="submit" onclick="validate()" disabled>SUBMIT</button>
+                </div>
+                <div class="pass">
+                    <span class="psw"><a href="forgot.html">Forgot password?</a></span><br></br>
+                </div>
+                <hr>
+                <div class="hrk">
+
+                    <nav>
+                        <p>Login With</p>
+                        <a href="#" id="nav"><img
+                                src="https://tse2.mm.bing.net/th?id=OIP.nIPV6ERnL6GzGVb_pciqdgHaHa&pid=Api&P=0&w=157&h=157"
+                                width="40px" height="40px"></a>
+                        <a href="#"><img
+                                src="https://tse4.mm.bing.net/th?id=OIP.TThkwI57B_YJ2yYsi71oHAHaHa&pid=Api&P=0&w=155&h=155"
+                                width="40px" height="42px"></a>
+                    </nav>
+                </div>
+                <hr>
+                <div class="reg">
+                    <p>Don't have an account?</p>
+                    <a href="sign up.html"><b>Sign Up</b></a>
+                </div>
+        </form>
+    </div>
+
+    <aside class="aside1">
+        <img src="sources/login.jpg" width="617px" height="585px">
+    </aside>
+    
+
+
+
+
+</body>
+
+</html>
